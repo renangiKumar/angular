@@ -1,0 +1,49 @@
+<h1 appMycolor>kumar</h1>
+<h4>{{title | uppercase}}</h4>
+<h2>{{6589.23 | currency:"USD"}}
+            {{0.00054565 | percent}}<br>
+            {{todaydate | date:'d/M/y'}}<br>
+            {{todaydate | date:'shortTime'}}<br>
+            {{ details | json }}<br>
+            {{months | slice:2:8}}
+</h2>
+
+<p>the value is {{value}}</p>
+<img [src]="b">
+<button (click)='show()'>click here</button>
+<br>
+
+<input [(ngModel)]="name">
+<p>{{name}}</p>
+
+
+<ol *ngFor="let key of array">
+            <li [ngStyle]="{'color':  key.name==='kumar' ? 'blue': 'red'}">
+                        <p> {{key.name}}</p>
+            </li>
+</ol>
+
+
+<!-- ngif -->
+<input type="number" [(ngModel)]="x">
+<div *ngIf=' x % 2 == 0 else okay'>
+            <p>Even Number</p>
+</div>
+<ng-template #okay>
+<div>odd number</div>
+</ng-template>
+
+
+
+
+<input [(ngModel)]="color">
+<div [ngSwitch]="color">
+            <div *ngSwitchCase="'red'">You pick red</div>
+            <div *ngSwitchCase="'blue'">You pick blue</div>
+            <div *ngSwitchCase="'yellow'">You pick yellow</div>
+            <div *ngSwitchDefault>invalid color</div>
+</div>
+
+
+<app-login></app-login>
+<app-signup></app-signup>

@@ -1,0 +1,39 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+            <title>ng-class Directive</title>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js">
+            </script>
+
+
+</head>
+
+<body ng-app="" style="text-align:center">
+
+            <h1 style="color:yellow">GeeksforGeeks</h1>
+            <h2>ng-class Directive</h2>
+
+            <div>
+                        <input type="button" ng-click="edit=true" value="Style" />
+                        <input type="button" ng-click="edit=false" value="Reset" />
+
+                        <br><br>
+
+                        <span ng-class="{true:'edit'}[edit]">
+                                    GeeksforGeeks
+                        </span>
+
+                        
+                        is the computer science portal for geeks.
+            </div>
+</body>
+
+</html> -->
+<ul>
+            <li *ngFor="let rank of ranks">
+                        <div [ngClass]="getClass(rank)">{{rank}}</div>
+            </li>
+</ul>
+<h1>login works!</h1>
