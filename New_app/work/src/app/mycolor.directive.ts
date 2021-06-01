@@ -13,7 +13,7 @@ export class MycolorDirective {
    }
    @HostListener('mouseleave') mouseLeave(){
     this.mycolor("yellow");
-  }
+  } 
   mycolor(color :string) {
     this._Element.nativeElement.style.color= color
   }

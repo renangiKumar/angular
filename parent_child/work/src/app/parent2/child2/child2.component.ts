@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './child2.component.html',
   styleUrls: ['./child2.component.css']
 })
+
 export class Child2Component  {
 
   constructor() { }
@@ -13,4 +14,7 @@ export class Child2Component  {
 
 
 }
+
+
+
 // child to parent data share through viewchild

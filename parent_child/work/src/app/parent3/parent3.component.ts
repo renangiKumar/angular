@@ -17,4 +17,6 @@ export class Parent3Component implements OnInit {
   ngOnInit(): void {
   }
 
+
+
 }

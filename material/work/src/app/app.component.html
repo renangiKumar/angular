@@ -5,24 +5,42 @@
 </mat-button-toggle-group> -->
 
 
-<section>
-  <div class="example-label">Raised</div>
-  <div class="example-button-row">
-    <button mat-raised-button>Basic</button>
-    <button mat-raised-button color="primary">Primary</button>
-    <button mat-raised-button color="accent">Accent</button>
-    <button mat-raised-button color="warn">Warn</button>
-    <button mat-raised-button disabled>Disabled</button>
-    <a mat-raised-button href="" target="_blank">Link</a>
-  </div>
-</section>
 
-<div class="example-container">
-  <mat-form-field appearance="fill">
-    <mat-label>Enter your password</mat-label>
-    <input matInput [type]="hide ? 'password' : 'text'">
-    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-    </button>
-  </mat-form-field>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-sm-3">
+      <mat-sidenav-container class="example-container" style="height: 1000px;">
+        <mat-sidenav mode="side" opened>
+          <ul>
+            <li>
+              <a routerLink="Autocomplete" routerLinkActive="active">autocomplete</a>
+            </li>
+
+            <li>
+              <a routerLink="Date" routerLinkActive="active">Date</a>
+            </li>
+            <li>
+            <a routerLink="Buttons" routerLinkActive="active">Buttons</a>
+          </li>
+          <li>
+            <a routerLink="Badge" routerLinkActive="active">Badge</a>
+          </li>
+          <li>
+            <a routerLink="Bottom" routerLinkActive="active">Bottom</a>
+          </li>
+          </ul>
+        </mat-sidenav>
+
+        <div class="col-sm-9">
+
+          <router-outlet></router-outlet>
+        </div>
+
+      </mat-sidenav-container>
+    </div>
+
+  </div>
+
 </div>

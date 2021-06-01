@@ -14,7 +14,7 @@ export class Child4Component implements OnInit {
   ngOnInit(): void {
   }
   trigger(){
-  this.sharedservice.notification.next("hello!!!!!!!!!")
+  this.sharedservice.notification.next("hello!!d!!!!!!!")
 }
 
 }

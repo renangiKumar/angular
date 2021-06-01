@@ -9,4 +9,4 @@ export class ChildComponent {
             Constructor (){}
 }
 
-// parent to child data share through input
+// parent to child data share through input  

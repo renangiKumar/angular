@@ -1,0 +1,31 @@
+<form [formGroup]="loginForm" >
+            <div class="form-row">
+            <div class="form-group col-5">
+            <div class="name">
+                        <label>username :</label> <br>
+                        <input type="text" formControlName="userName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.userName.errors }">
+                        <div *ngIf="submitted && f.userName.errors" class="invalid-feedback">
+                                    <div *ngIf="f.userName.errors.required">User Name is required</div>
+                                </div>
+            </div>
+            <div class="pass">
+                        <label>password :</label> <br>
+                        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                    <div *ngIf="f.password.errors.required">password is required</div>
+                                   
+                                </div>
+                                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                    <div *ngIf="f.password.errors.pattern">password is required</div>
+                                   
+                                </div>
+            </div>
+
+</div>
+</div>
+<button (click)="onsubmit()">submit</button>
+
+</form>
+<router-outlet></router-outlet>
+<a routerLink="/register" routerLinkActive="active">register</a><br>
+<a routerLink="/table" routerLinkActive="active">table</a>

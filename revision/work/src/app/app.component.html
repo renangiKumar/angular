@@ -1,0 +1,43 @@
+<h1>{{title}}</h1>
+
+<img [src]="image"> <br>
+
+
+<img [src]="i">
+<button (click)='show()'>click here</button> <br>
+
+<input [(ngModel)]="title">
+<p>{{title}}</p>
+
+<!-- ngfor -->
+<ul *ngFor="let key of array">
+  <li [ngStyle]="{'color':  key.name==='kumar' ? 'blue': 'red'}">
+    <p> {{key.name}}</p>
+</li>
+</ul>
+
+<!-- ng if -->
+<input type="number" [(ngModel)]="x">
+<div *ngIf='x % 2 ==0 else okay'>
+  <p>even number</p>
+</div>
+<ng-template #okay>
+<div>odd number</div>
+</ng-template>
+
+<!-- ngSwitch -->
+<input type="text" [(ngModel)]="color">
+<div [ngSwitch]="color">
+  <div *ngSwitchCase="'red'">You pick red</div>
+  <div *ngSwitchCase="'blue'">you pick blue</div>
+  <div *ngSwitchCase="'orange'">you pick orange</div>
+  <div *ngSwitchCase="'green'">you pick green</div>
+  <div *ngSwitchCase="'yellow'">you pick yellow</div>
+  <div *ngSwitchDefault>invalid color</div>
+</div>
+
+
+<button (click)="ok()">a component</button> <br>
+
+
+<router-outlet></router-outlet>

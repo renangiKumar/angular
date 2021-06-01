@@ -12,6 +12,9 @@ import { Child3Component } from './parent3/child3/child3.component';
 import { Parent4Component } from './parent4/parent4.component';
 import { Child4Component } from './parent4/child4/child4.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTableModule} from '@angular/material/table';
+
 
 @NgModule({
   declarations: [
@@ -23,12 +26,17 @@ import { Child4Component } from './parent4/child4/child4.component';
     Parent3Component,
     Child3Component,
     Parent4Component,
-    Child4Component
+    Child4Component,
+    
+   
   ],
   imports: [
     BrowserModule,
-  
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatTableModule
+    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

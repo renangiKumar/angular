@@ -1,0 +1,35 @@
+<form [formGroup]="signupForm">
+    <div class="form-row">
+        <div class="form-group col-5">
+
+            <div class="fname">
+                <label>FirstName :</label>
+                <input type="text" formControlName="firstName" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }">
+                <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                    <div *ngIf="f.firstName.errors.required">LastName is required</div>
+                    <div *ngIf="f.firstName.errors.minlength">FirstName must be at least 4 characters</div>
+                </div>
+            </div>
+            <div class="lname">
+                <label>LastName :</label>
+                <input type="text" formControlName="lastName" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }">
+                <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                    <div *ngIf="f.lastName.errors.required">LastName is required</div>
+                </div>
+            </div>
+            <div class="mobile">
+                <label>Mobile no :</label>
+                <input type="number" formControlName="mobile" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }">
+                <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
+                    <div *ngIf="f.mobile.errors.required">Mobile is required</div>
+                    <div *ngIf="f.mobile.errors.minlength">Mobile must be at least 10 characters</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button (click)="onsubmit()">submit</button>
+</form>
